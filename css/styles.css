@@ -32,8 +32,13 @@ body{
     /* background-color: salmon; */
 }
 
+.desactive-container{
+    height: 100%;
+}
+
 .hero__image1, .about__image, .desactive__image{
     width: 100%;
+    height: inherit;
 }
 
 .hero__article, .about__article{
@@ -66,3 +71,17 @@ body{
     letter-spacing: 10px;
 }
 
+
+
+.about__title{
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+.about__text{
+    margin-top: 1em;
+    color: var(--darkGray);
+    line-height: 16pt;
+    font-size: 1.2rem;
+    /* background-color: salmon; */
+}
