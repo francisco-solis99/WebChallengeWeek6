@@ -56,10 +56,19 @@ body{
     top: 0;
 }
 
-
 .menu__list{
     list-style: none;
     display: flex;
+}
+
+.menu__item-link{
+    text-decoration: none;
+    color: white;
+    transition: ease-in 300ms all;
+}
+
+.menu__item-link:hover{
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .menu__item{
