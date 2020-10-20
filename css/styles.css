@@ -21,7 +21,49 @@ body{
 }
 
 .header{
-    display: none;
+    /* background-color: darkcyan; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    padding: 2.5rem 3rem;
+    left: -5px
+    
+}
+
+.burguer__icon{
+    position: absolute;
+    left: 10px;
+    top: 3rem;
+}
+
+.menu{
+   background-color: white;
+   width: 100%;
+   padding: 3em 1em; 
+   font-weight: 700;
+   color: var(--black);
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   top: -100px;
+   left: 0;
+}
+
+.menu.is-active{
+    top: 0;
+}
+
+
+.menu__list{
+    list-style: none;
+    display: flex;
+}
+
+.menu__item{
+    margin: 0 10px;
 }
 
 .hero{
