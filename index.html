@@ -19,7 +19,7 @@
         </picture>
       </h1>
       <nav class="menu">
-        <img src="./images/icon-close.svg" alt="close icon menu">
+        <img src="./images/icon-close.svg" alt="close icon menu" class="menu__close-icon">
         <ul class="menu__list">
           <li class="menu__item">home</li>
           <li class="menu__item">shop</li>
@@ -30,9 +30,10 @@
     </header>
 
     <main class="hero">
-      <figure class="hero__image-container">
+      <picture class="hero__image-container">
+        <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-1.jpg"/>
         <img src="./images/mobile-image-hero-1.jpg" alt="beautiful chairs and a big table" class="hero__image1">
-      </figure>
+      </picture>
       <article class="hero__article">
         <h2 class="hero__title">
           Discover innovative ways to decorate
@@ -49,9 +50,9 @@
         </div>
       </article>
 
-      <figure class="about__image-container">
+      <picture class="about__image-container">
         <img src="./images/image-about-dark.jpg" alt="dark chairs and light table on the middle" class="about__image">
-      </figure>
+      </picture>
 
       <article class="about__article">
         <h2 class="about__title">
@@ -64,9 +65,9 @@
         </p>
       </article>
 
-      <figure class="desactive-container">
+      <picture class="desactive-container">
         <img src="./images/image-about-light.jpg" alt="justa a chair with a light desactive format image" class="desactive__image">
-      </figure>
+      </picture>
     </main>
   </body>
 </html>
