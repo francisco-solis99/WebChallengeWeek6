@@ -21,7 +21,60 @@ body{
 }
 
 .header{
-    display: none;
+    /* background-color: darkcyan; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    padding: 2.5rem 3rem;
+    left: -5px;
+    z-index: 99;
+    
+}
+
+.burguer__icon{
+    position: absolute;
+    left: 10px;
+    top: 3rem;
+    z-index: 99;
+}
+
+.menu{
+   background-color: white;
+   width: 100%;
+   padding: 3em 1em; 
+   font-weight: 700;
+   color: var(--black);
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   top: -100px;
+   left: 0;
+}
+
+.menu.is-active{
+    top: 0;
+}
+
+.menu__list{
+    list-style: none;
+    display: flex;
+}
+
+.menu__item-link{
+    text-decoration: none;
+    color: white;
+    transition: ease-in 300ms all;
+}
+
+.menu__item-link:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.menu__item{
+    margin: 0 10px;
 }
 
 .hero{
@@ -85,3 +138,175 @@ body{
     font-size: 1.2rem;
     /* background-color: salmon; */
 }
+
+/* Arrows */
+
+.arrows{
+    background-color: var(--black);
+    position: absolute;
+    display: flex;
+    padding: 20px;
+    right: 0;
+    bottom: 4px;
+
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrow__Left{
+    margin-right: 40px;
+}
+
+.hero__image-container{
+    position: relative;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    /* Styles to content */
+    .hero{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:  0;
+        grid-template-areas: "heroimg    heroText"
+                             "aboutText  aboutimg"
+                             "footerimg  footerimg";
+        justify-content: center;
+        align-items: center;
+        /* background-color: salmon; */
+    }
+
+    .hero__article, .about__article{
+        padding: 1rem 2rem;
+        /* background-color: sandybrown; */
+    }
+
+    .hero__image-container, .about__image-container{
+        height: 100%;
+    }
+
+    .hero__image-container{
+        grid-area: heroimg;
+    }
+
+    .hero__article{
+        grid-area:heroText;
+    }
+
+    .about__image-container{
+        grid-area:  aboutimg;
+    }
+
+    .about__article{
+        grid-area: aboutText;
+    }
+
+    .desactive-container{
+        grid-area: footerimg;
+        height: auto;
+    }
+
+    /* Styles to menu */
+    .header{
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-wrap: wrap;
+        position: initial;
+        justify-content: space-between;
+        padding: 1rem 2.5rem;
+    }
+    
+    .burguer__icon{
+        display: none;
+    }
+
+    .menu__close-icon{
+        display: none;
+    }
+    
+    .menu{
+       background-color: initial;
+       color: white;
+       width: auto;
+       padding: 1em 0; 
+       font-weight: 700;
+       position: initial;
+    }
+
+    .menu__list{
+        list-style: none;
+        display: flex;
+    }
+    
+    .menu__item{
+        margin:0;
+        margin-left: 20px;
+    }
+
+    /* Arrow styles */
+    .arrows{
+       
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    /* Styles to content */
+    .hero{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 30% 30% 10% 30%;
+        grid-template-rows: 60% 40%;
+        gap:  0;
+        grid-template-areas: "heroimg    heroimg   heroText  heroText"
+                             "aboutimg   aboutText aboutText footerimg";
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__image-container, .about__image-container, .desactive-container{
+        height: 100%;
+    }
+
+    .hero__article, .about__article{
+        padding: 0 10%;
+    }
+
+    /* Styles to menu */
+    .header{
+        
+        position: absolute;
+        width: auto;
+        padding: 2.5rem 0;
+        background-color: initial;
+        /* background-color: darkcyan; */
+        justify-content: space-between;
+        left:50px
+    }
+
+    .menu__list{
+        margin-left: 30px;
+    }
+
+    .menu__item{
+        margin-left: 30px;
+    }
+
+    /* arrows styles */
+    .arrows{
+        right: calc(-114px + 10px);
+        padding: 15px;
+        width: 17%;
+        justify-content: center;
+    }
+
+    .arrow__Left{
+        margin-right: 50px;
+    }
+}
+

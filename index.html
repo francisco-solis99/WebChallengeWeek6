@@ -9,33 +9,58 @@
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
+    <i class="burguer__icon">
+      <img src="./images/icon-hamburger.svg" alt="hamburguer icon menu">
+    </i>
     <header class="header">
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item">home</li>
-          <li class="menu__item">shop</li>
-          <li class="menu__item">about</li>
-          <li class="menu__item">contact</li>
-        </ul>
-      </nav>
       <h1>
-        <picture class="logo-container">
+        <picture class="logo__container">
           <img src="./images/logo.svg" alt="room logo" class="logo__image">
         </picture>
       </h1>
+      <nav class="menu">
+        <img src="./images/icon-close.svg" alt="close icon menu" class="menu__close-icon">
+        <ul class="menu__list">
+          <a href="#" class="menu__item-link">
+            <li class="menu__item">home</li>
+          </a>
+          <a href="#" class="menu__item-link">
+            <li class="menu__item">shop</li>
+          </a>
+          <a href="#" class="menu__item-link">
+            <li class="menu__item">about</li>
+          </a>
+          <a href="#" class="menu__item-link">
+            <li class="menu__item">contact</li>
+          </a>
+        </ul>
+      </nav>
     </header>
 
     <main class="hero">
-      <figure class="hero__image-container">
+      <picture class="hero__image-container">
+        <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-1.jpg"/>
         <img src="./images/mobile-image-hero-1.jpg" alt="beautiful chairs and a big table" class="hero__image1">
-      </figure>
+
+        <div class="arrows">
+          <div class="arrow arrow__Left">
+            <img src="./images/icon-angle-left.svg" alt="arrow left" class="arrow__image">
+          </div>
+          <div class="arrow arrow__Right">
+            <img src="./images/icon-angle-right.svg" alt="arrow right" class="arrow__image">
+          </div>
+        </div>
+      </picture>
+
+     
+
       <article class="hero__article">
         <h2 class="hero__title">
           Discover innovative ways to decorate
         </h2>
 
         <p class="hero__text">
-          We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form andnfunction in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.
+          We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.
         </p>
         <div class="article__shop">
           <span class="shop__text">SHOP NOW</span>
@@ -45,9 +70,9 @@
         </div>
       </article>
 
-      <figure class="about__image-container">
+      <picture class="about__image-container">
         <img src="./images/image-about-dark.jpg" alt="dark chairs and light table on the middle" class="about__image">
-      </figure>
+      </picture>
 
       <article class="about__article">
         <h2 class="about__title">
@@ -60,9 +85,9 @@
         </p>
       </article>
 
-      <figure class="desactive-container">
+      <picture class="desactive-container">
         <img src="./images/image-about-light.jpg" alt="justa a chair with a light desactive format image" class="desactive__image">
-      </figure>
+      </picture>
     </main>
   </body>
 </html>
