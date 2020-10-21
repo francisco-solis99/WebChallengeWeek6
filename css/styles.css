@@ -247,6 +247,12 @@ body{
         margin:0;
         margin-left: 20px;
     }
+
+    /* Arrow styles */
+    .arrows{
+       
+        bottom: 0;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -289,6 +295,18 @@ body{
 
     .menu__item{
         margin-left: 30px;
+    }
+
+    /* arrows styles */
+    .arrows{
+        right: calc(-114px + 10px);
+        padding: 15px;
+        width: 17%;
+        justify-content: center;
+    }
+
+    .arrow__Left{
+        margin-right: 50px;
     }
 }
 
