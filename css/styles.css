@@ -29,7 +29,8 @@ body{
     justify-content: center;
     width: 100%;
     padding: 2.5rem 3rem;
-    left: -5px
+    left: -5px;
+    z-index: 99;
     
 }
 
@@ -37,6 +38,7 @@ body{
     position: absolute;
     left: 10px;
     top: 3rem;
+    z-index: 99;
 }
 
 .menu{
@@ -136,6 +138,35 @@ body{
     font-size: 1.2rem;
     /* background-color: salmon; */
 }
+
+/* Arrows */
+
+.arrows{
+    background-color: var(--black);
+    position: absolute;
+    display: flex;
+    padding: 20px;
+    right: 0;
+    bottom: 4px;
+
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrow__Left{
+    margin-right: 40px;
+}
+
+.hero__image-container{
+    position: relative;
+}
+
+
+
 
 @media screen and (min-width: 768px){
     /* Styles to content */
