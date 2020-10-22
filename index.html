@@ -39,15 +39,15 @@
 
     <main class="hero">
       <picture class="hero__image-container">
-        <source media="(min-width: 500px)" srcset="./images/desktop-image-hero-1.jpg"/>
-        <img src="./images/mobile-image-hero-1.jpg" alt="beautiful chairs and a big table" class="hero__image1">
+      
+        <img src="./images/mobile-image-hero-1.jpg" alt="beautiful chairs and a big table" class="hero__image1" id="imageSlide">
 
         <div class="arrows">
-          <div class="arrow arrow__Left">
-            <img src="./images/icon-angle-left.svg" alt="arrow left" class="arrow__image">
+          <div class="arrow arrow__Left" id="arrowLeft">
+            <img src="./images/icon-angle-left.svg" alt="arrow left" class="arrow__image" >
           </div>
-          <div class="arrow arrow__Right">
-            <img src="./images/icon-angle-right.svg" alt="arrow right" class="arrow__image">
+          <div class="arrow arrow__Right" id="arrowRight">
+            <img src="./images/icon-angle-right.svg" alt="arrow right" class="arrow__image" >
           </div>
         </div>
       </picture>
@@ -89,6 +89,7 @@
         <img src="./images/image-about-light.jpg" alt="justa a chair with a light desactive format image" class="desactive__image">
       </picture>
     </main>
+    <script src="./main.js" defer></script>
   </body>
 </html>
 
