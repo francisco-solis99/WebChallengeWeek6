@@ -356,5 +356,9 @@ excepto en el menu */
         justify-content: center;
     }
 
+    .arrow{
+        width: 100%;
+    }
+
 }
 
