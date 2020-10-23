@@ -29,7 +29,7 @@ const SLIDES = [
 // --------------------DOM elements-----------------
 
 //icons
-const burguerIcon = document.querySelector('.burguer__icon');
+const burguerIcon = document.querySelector('#burguer');
 const closeIcon = document.querySelector('.menu__close-icon');
 // arrows
 const leftArrow = document.getElementById('arrowLeft');
@@ -39,6 +39,10 @@ const image = document.getElementById('imageSlide');
 // texts
 const titleSlide = document.querySelector('.hero__title');
 const textSlide = document.querySelector('.hero__text');
+// menu
+const menu = document.querySelector('#menu');
+const overlay = document.querySelector('.overlay');
+
 
 // get viewport width
 let widthViewport = window.innerWidth || document.documentElement.clientWidth;
@@ -53,13 +57,16 @@ window.addEventListener('load',
     
 }, false); 
 
+// Menu controls
+burguerIcon.addEventListener('click', showMenu);
+closeIcon.addEventListener('click', hideMenu);
 
 
-
-// functions
+// Slide controls
 leftArrow.addEventListener('click', prevSlide);
 rightArrow.addEventListener('click', nextSlide);
 
+// Slide functions
 let n = 0;
 function prevSlide(){
     if(SLIDES[n-1]){
@@ -84,4 +91,19 @@ function fillInfo(){
         image.src = SLIDES[n].srcDesktop;
     else
         image.src = SLIDES[n].srcMobil;
+}
+
+
+// Menu functions
+
+function showMenu(){
+    menu.classList.add('is-active')
+    burguerIcon.classList.add('capas')
+    overlay.classList.add('is-active')
+}
+
+function hideMenu(){
+    menu.classList.remove('is-active');
+    burguerIcon.classList.remove('capas')
+    overlay.classList.remove('is-active')
 }

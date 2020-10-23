@@ -18,6 +18,7 @@ html{
 body{
     font-family: 'Spartan', sans-serif ;
     font-size: 1.2rem;
+    position: relative;
 }
 
 .header{
@@ -31,15 +32,18 @@ body{
     padding: 2.5rem 3rem;
     left: -5px;
     z-index: 99;
-    
 }
 
 .burguer__icon{
     position: absolute;
     left: 10px;
     top: 3rem;
-    z-index: 99;
+    z-index: 100;
+    cursor: pointer;
+    display: block;
+    outline: none;
 }
+
 
 .menu{
    background-color: white;
@@ -52,11 +56,39 @@ body{
    position: fixed;
    top: -100px;
    left: 0;
+   transition: all ease-in 300ms;
 }
+/* ------------Acciones que se ocupan en Javascript---------------- */
 
+/* Llevar al menu hacia abajo en pantalla */
 .menu.is-active{
     top: 0;
 }
+
+/* EL overlay trasparaente en todo el viewport
+excepto en el menu */
+.overlay{
+    display: none;
+    transition: all ease-in 300ms;
+}
+
+.overlay.is-active{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* LLevar al menu hamburguesa hacia atras y hacia adelante */
+.burguer__icon.capas{
+    z-index: 99;
+}
+/* ---------------------------------------------------- */
+
 
 .menu__list{
     list-style: none;
@@ -65,16 +97,18 @@ body{
 
 .menu__item-link{
     text-decoration: none;
-    color: white;
-    transition: ease-in 300ms all;
+    color: black;
+    transition: ease-in 200ms all;
 }
 
-.menu__item-link:hover{
-    color: rgba(0, 0, 0, 0.5);
-}
+
 
 .menu__item{
     margin: 0 10px;
+}
+
+.menu__item-link:hover{
+    opacity: 0.7;
 }
 
 .hero{
@@ -117,6 +151,7 @@ body{
     width: 75%;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .shop__text{
@@ -136,7 +171,7 @@ body{
     color: var(--darkGray);
     line-height: 16pt;
     font-size: 1.2rem;
-    /* background-color: salmon; */
+    
 }
 
 /* Arrows */
@@ -145,7 +180,6 @@ body{
     background-color: var(--black);
     position: absolute;
     display: flex;
-    padding: 20px;
     right: 0;
     bottom: 4px;
 
@@ -154,11 +188,13 @@ body{
 .arrow{
     display: flex;
     justify-content: center;
+    padding: 20px;
     cursor: pointer;
+    transition: all ease-in-out 200ms;
 }
 
-.arrow__Left{
-    margin-right: 40px;
+.arrow:hover{
+    background-color: var(--verydarkGray);
 }
 
 .hero__image-container{
@@ -242,15 +278,23 @@ body{
         list-style: none;
         display: flex;
     }
+
+    .menu__item-link{
+        color: whitesmoke;
+    }
+    .menu__item:hover{
+        border-bottom:  whitesmoke 1px solid;
+    }
+
     
     .menu__item{
         margin:0;
         margin-left: 20px;
+        transition: all ease-in 100ms;
     }
 
     /* Arrow styles */
     .arrows{
-       
         bottom: 0;
     }
 }
@@ -293,6 +337,14 @@ body{
         margin-left: 30px;
     }
 
+    .menu__item-link:hover{
+       color: var(--verydarkGray);
+    }
+
+    .menu__item:hover{
+        border-bottom: var(--verydarkGray) 1px solid;
+    }
+
     .menu__item{
         margin-left: 30px;
     }
@@ -300,13 +352,9 @@ body{
     /* arrows styles */
     .arrows{
         right: -16.6%;
-        padding: 12px;
         width: calc(100%/6);
         justify-content: center;
     }
 
-    .arrow__Left{
-        margin-right: 50px;
-    }
 }
 
