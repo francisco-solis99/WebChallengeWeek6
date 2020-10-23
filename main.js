@@ -44,8 +44,14 @@ const textSlide = document.querySelector('.hero__text');
 let widthViewport = window.innerWidth || document.documentElement.clientWidth;
 //  A cross-browser solution (using clientWidth and clientHeight for IE8 and earlier):
 
-
-
+window.addEventListener('load', 
+    function() { 
+        if (widthViewport > 500)
+            image.src = SLIDES[n].srcDesktop;
+        else
+            image.src = SLIDES[n].srcMobil;
+    
+}, false); 
 
 
 
